@@ -8,6 +8,15 @@ Plus::Plus(const string &nu,int valor,int cap)
 	setCapacidade(cap);
 }
 
+Plus::Plus()
+:Kindle()
+{	
+	bool nuv = false;
+	int cap = 0;
+	setNuvem(nuv);
+	setCapacidade(cap);
+}
+
 Plus::~Plus(){	
 }
 

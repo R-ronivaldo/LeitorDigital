@@ -6,6 +6,16 @@ Kobo::Kobo(const string &nu,bool comp,const string &us)
 	setCompartilhar(comp);
 	setUserShare(us);
 }
+
+Kobo::Kobo()
+:LeitorDigital()
+{
+	bool comp = true;
+	string us = "Vazio";
+	setCompartilhar(comp);
+	setUserShare(us);
+}
+
 Kobo::~Kobo(){
 }
 

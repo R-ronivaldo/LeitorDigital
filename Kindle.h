@@ -14,6 +14,7 @@ class Kindle : public LeitorDigital
 	friend ostream &operator<<(ostream &,const Kindle &);
 	public:
 		Kindle(const string &,int);
+		Kindle();
 		~Kindle();
 		
 		//Get/Set

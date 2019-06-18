@@ -14,7 +14,7 @@ class Plus : public Kindle
 	friend ostream &operator<<(ostream &,const Plus &);
 	public:
 		Plus(const string &,int,int);
-		Plus(const Plus &);
+		Plus();
 		~Plus();
 		
 		//Get/Set

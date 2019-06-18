@@ -14,6 +14,7 @@ class LevFit: public LeitorDigital
 	friend ostream &operator<<(ostream &,const LevFit &);
 	public:
 		LevFit(const string &,bool);
+		LevFit();
 		~LevFit();
 		
 		//Set/Get

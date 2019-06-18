@@ -14,6 +14,7 @@ class Kobo : public LeitorDigital
 	friend ostream &operator<<(ostream &,const Kobo &);
 	public:
 		Kobo(const string &,bool,const string &);
+		Kobo();
 		~Kobo();
 		
 		//Set/Get

@@ -3,7 +3,6 @@
 int LeitorDigital::numDeUserAtivos = 0;
 
 LeitorDigital::LeitorDigital(const string &nu)
-:user(nu)
 {
 	setUser(nu);
 	this->quantBiblio = 0;

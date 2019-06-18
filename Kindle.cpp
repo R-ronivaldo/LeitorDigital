@@ -8,6 +8,13 @@ Kindle::Kindle(const string &nu, int valor)
 	setValor(valor);	
 }
 
+Kindle::Kindle(){
+	bool serv = false;
+	valor = 0;
+	setServico(serv);
+	setValor(valor);	
+}
+
 Kindle::~Kindle(){
 }
 

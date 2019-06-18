@@ -9,6 +9,16 @@ LevFit::LevFit(const string &nu,bool can)
 	setEscrever(esc);
 }
 
+LevFit::LevFit()
+:LeitorDigital()
+{
+	string esc = "vazio";
+	bool can = false;
+	setCaneta(can);
+	setEscrever(esc);
+	
+}
+
 LevFit::~LevFit(){
 	
 }
