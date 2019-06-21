@@ -1,6 +1,7 @@
 #ifndef KINDLE_H
 #define KINDLE_H
 #include "LeitorDigital.h"
+#include "User.h"
 #include <iostream>
 #include <string>
 using std::ostream;
@@ -15,6 +16,7 @@ class Kindle : public LeitorDigital
 	public:
 		Kindle(const string &,int);
 		Kindle();
+		Kindle(const Kindle &);
 		~Kindle();
 		
 		//Get/Set

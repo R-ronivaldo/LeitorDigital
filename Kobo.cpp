@@ -16,6 +16,13 @@ Kobo::Kobo()
 	setUserShare(us);
 }
 
+Kobo::Kobo (const Kobo &kobo)
+:LeitorDigital(static_cast<LeitorDigital>(kobo))
+{
+	this->compartilhar = kobo.compartilhar;
+	this->userShare = kobo.userShare;
+}
+
 Kobo::~Kobo(){
 }
 
@@ -57,9 +64,10 @@ bool Kobo::operator!=(const Kobo &kobo)const{
 	return ! (*this == kobo);
 }
 
-const &Kobo::operator=(const Kobo &kobo){
-		if (&kobo != this) {
-		compartilhar = kobo.compartilhar;
-		userShare = kobo.userShare;
-	}
+const Kobo &Kobo::operator=(const Kobo &kobo){
+	*static_cast< LeitorDigital * >(this) = static_cast< LeitorDigital >(kobo);
+		this->compartilhar = kobo.compartilhar;
+		this->userShare = kobo.userShare;
+	
+	return *this;
 }

@@ -1,6 +1,7 @@
 #ifndef KOBO_H
 #define KOBO_H
 #include "LeitorDigital.h"
+#include "User.h"
 #include <iostream>
 #include <string>
 using std::ostream;
@@ -15,6 +16,7 @@ class Kobo : public LeitorDigital
 	public:
 		Kobo(const string &,bool,const string &);
 		Kobo();
+		Kobo (const Kobo &);
 		~Kobo();
 		
 		//Set/Get
@@ -28,7 +30,7 @@ class Kobo : public LeitorDigital
 		
 		bool operator==(const Kobo &)const;
 		bool operator!=(const Kobo &)const;
-		const &operator=(const Kobo &);
+		const Kobo &operator=(const Kobo &);
 		
 	private:
 		bool compartilhar;

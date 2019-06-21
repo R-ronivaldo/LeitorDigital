@@ -15,6 +15,7 @@ class Plus : public Kindle
 	public:
 		Plus(const string &,int,int);
 		Plus();
+		Plus (const Plus &);
 		~Plus();
 		
 		//Get/Set

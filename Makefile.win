@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = LeitorDigital.o Kindle.o LevFit.o Kobo.o Plus.o Biblioteca.o Livro.o main.o User.o UserPremium.o UserBasic.o
-LINKOBJ  = LeitorDigital.o Kindle.o LevFit.o Kobo.o Plus.o Biblioteca.o Livro.o main.o User.o UserPremium.o UserBasic.o
+OBJ      = LeitorDigital.o Kindle.o LevFit.o Kobo.o Plus.o Biblioteca.o Livro.o main.o
+LINKOBJ  = LeitorDigital.o Kindle.o LevFit.o Kobo.o Plus.o Biblioteca.o Livro.o main.o
 LIBS     = -L"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
 INCS     = -I"C:/Program Files/Dev-Cpp/MinGW64/include" -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files/Dev-Cpp/MinGW64/include" -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -47,12 +47,3 @@ Livro.o: Livro.cpp
 
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
-
-User.o: User.cpp
-	$(CPP) -c User.cpp -o User.o $(CXXFLAGS)
-
-UserPremium.o: UserPremium.cpp
-	$(CPP) -c UserPremium.cpp -o UserPremium.o $(CXXFLAGS)
-
-UserBasic.o: UserBasic.cpp
-	$(CPP) -c UserBasic.cpp -o UserBasic.o $(CXXFLAGS)

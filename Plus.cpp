@@ -17,6 +17,13 @@ Plus::Plus()
 	setCapacidade(cap);
 }
 
+Plus::Plus (const Plus &plusss)
+:Kindle(static_cast<Kindle>(plusss))
+{
+		this->nuvem = plusss.nuvem;
+		this->capacidade = plusss.capacidade;
+}
+
 Plus::~Plus(){	
 }
 
@@ -57,8 +64,9 @@ bool Plus::operator!=(const Plus &pluss)const{
 }
 
 const Plus &Plus::operator=(const Plus &pluss){
-	if (&pluss != this){
-		nuvem = pluss.nuvem;
-		capacidade = pluss.capacidade;
-	}
+	*static_cast< Kindle * >(this) = static_cast< Kindle >(pluss);
+	this->nuvem = pluss.nuvem;
+	this->capacidade = pluss.capacidade;
+	
+	return *this;
 }

@@ -19,6 +19,13 @@ LevFit::LevFit()
 	
 }
 
+LevFit::LevFit(const LevFit &lev)
+:LeitorDigital(static_cast<LeitorDigital>(lev))
+{
+	this->caneta = lev.caneta;
+	this->escrever = lev.escrever;
+}
+
 LevFit::~LevFit(){
 	
 }
@@ -56,10 +63,13 @@ bool LevFit::operator!=(const LevFit &lev)const{
 }
 
 const LevFit &LevFit::operator=(const LevFit &lev){
-	if (&lev != this) {
-		caneta = lev.caneta;
-		escrever = lev.escrever;
-	}
+	
+	*static_cast< LeitorDigital * >(this) = static_cast< LeitorDigital >(lev);
+	this->caneta = lev.caneta;
+	this->escrever = lev.escrever;
+	
+	return *this;
+
 }
 		
 ostream &operator<<(ostream &output,const LevFit &lev){

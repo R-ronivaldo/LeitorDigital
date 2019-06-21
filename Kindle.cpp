@@ -15,6 +15,13 @@ Kindle::Kindle(){
 	setValor(valor);	
 }
 
+Kindle::Kindle(const Kindle &leitor)
+:LeitorDigital( static_cast< LeitorDigital >( leitor ))
+{
+	this->servico = leitor.servico;
+	this->valor = leitor.valor;
+}
+
 Kindle::~Kindle(){
 }
 
@@ -55,9 +62,9 @@ bool Kindle::operator!=(const Kindle &kindle)const {
 }
 
 const Kindle &Kindle::operator=(const Kindle &kindle){
-	if (&kindle != this){
-		servico = kindle.servico;
-		valor = kindle.valor;
-		return *this;
-	}
+	*static_cast< LeitorDigital * >(this) = static_cast< LeitorDigital >(kindle);
+	this->servico = kindle.servico;
+	this->valor = kindle.valor;
+	
+	return *this;
 }
