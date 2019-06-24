@@ -1,7 +1,6 @@
 #ifndef LEVFIT_H
 #define LEVFIT_H
 #include "LeitorDigital.h"
-#include "User.h"
 #include <iostream>
 #include <string>
 using std::ostream;

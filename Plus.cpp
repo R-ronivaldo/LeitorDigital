@@ -47,7 +47,6 @@ ostream &operator<<(ostream &output,const Plus &pluss){
 	output << static_cast< Kindle >( pluss ) << endl;
 	output << "Serviços de nuvem Ativo: " << pluss.nuvem << "." << endl;
 	output << "Capacidade: " << pluss.capacidade << " GB." << endl;
-	
 	return output;
 }
 
@@ -67,6 +66,5 @@ const Plus &Plus::operator=(const Plus &pluss){
 	*static_cast< Kindle * >(this) = static_cast< Kindle >(pluss);
 	this->nuvem = pluss.nuvem;
 	this->capacidade = pluss.capacidade;
-	
 	return *this;
 }

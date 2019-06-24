@@ -1,7 +1,6 @@
 #ifndef KOBO_H
 #define KOBO_H
 #include "LeitorDigital.h"
-#include "User.h"
 #include <iostream>
 #include <string>
 using std::ostream;

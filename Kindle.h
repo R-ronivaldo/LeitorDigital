@@ -1,7 +1,6 @@
 #ifndef KINDLE_H
 #define KINDLE_H
 #include "LeitorDigital.h"
-#include "User.h"
 #include <iostream>
 #include <string>
 using std::ostream;

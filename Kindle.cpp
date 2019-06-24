@@ -46,7 +46,6 @@ ostream &operator<<(ostream &output,const Kindle &kindle){
 	output << "Serviços Ativo: " << kindle.servico << "." << endl;
 	output << "Valor: " << kindle.valor << "." << endl;
 	return output;
-	
 }
 
 bool Kindle::operator==(const Kindle &kindle)const{

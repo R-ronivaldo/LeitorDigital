@@ -67,15 +67,12 @@ const LevFit &LevFit::operator=(const LevFit &lev){
 	*static_cast< LeitorDigital * >(this) = static_cast< LeitorDigital >(lev);
 	this->caneta = lev.caneta;
 	this->escrever = lev.escrever;
-	
 	return *this;
-
 }
 		
 ostream &operator<<(ostream &output,const LevFit &lev){
 	output << static_cast< LeitorDigital >( lev ) << endl;
 	output << "Caneta Ativa: " << lev.caneta << "." << endl;
 	output << "Lendo: " << lev.escrever << "." << endl;
-	
 	return output;
 }

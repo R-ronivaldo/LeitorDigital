@@ -48,7 +48,6 @@ ostream &operator<<(ostream &output,const Kobo &kobo){
 	output << static_cast< LeitorDigital >( kobo ) << endl;
 	output << "Compartilhamento de perfil ativo: " << kobo.compartilhar << endl;
 	output << "Nome do Perfil a ser Compartilhado: " << kobo.userShare << endl;
-	
 	return output;
 }
 
@@ -68,6 +67,5 @@ const Kobo &Kobo::operator=(const Kobo &kobo){
 	*static_cast< LeitorDigital * >(this) = static_cast< LeitorDigital >(kobo);
 		this->compartilhar = kobo.compartilhar;
 		this->userShare = kobo.userShare;
-	
 	return *this;
 }
